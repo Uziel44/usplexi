@@ -37,6 +37,15 @@ a { text-decoration: none; color: inherit; }
 ol, ul { margin: 0; padding: 0; list-style: none; }
 img { max-width: 100%; display: block; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 
@@ -303,6 +312,9 @@ section[id] { scroll-margin-top: 80px; }
 
 .portfolio-card img {
   width: 100%;
+  /* height:auto es necesario: el atributo height del <img> (que se deja para
+     evitar saltos de layout) si no fija la altura y le gana al aspect-ratio. */
+  height: auto;
   aspect-ratio: 1.4;
   object-fit: cover;
   border-radius: 12px;
@@ -311,14 +323,27 @@ section[id] { scroll-margin-top: 80px; }
 .portfolio-name { font-size: 14px; font-weight: 600; padding: 0 4px; }
 .portfolio-desc { font-size: 13px; color: var(--ink-faint); padding: 0 4px 4px; }
 
+/* La 3ª columna queda vacía en mobile (initPortfolioColumns reparte sus cards). */
+.portfolio-col[hidden] { display: none; }
+
+/* Mobile: 2 columnas con 4 cards cada una (initPortfolioColumns las reparte).
+   Cada imagen se recorta a ~2/3 de su ancho: la caja es 14:15 y una captura de
+   1.4:1 muestra (14/15) / 1.4 = 2/3. Es aproximado: las capturas no tienen
+   todas la misma proporción (de 0.8 a 2.1), así que las más anchas se recortan
+   más y las verticales casi nada. Anclada a la izquierda, donde está el título
+   de cada web. */
 @media (max-width: 520px) {
-  .portfolio { padding: 20px 14px 50px; }
-  .portfolio-columns { gap: 8px; }
-  .portfolio-col { gap: 8px; }
-  .portfolio-col:nth-child(2) { margin-top: 32px; }
-  .portfolio-col:nth-child(3) { margin-top: -16px; }
-  .portfolio-name { font-size: 12px; }
-  .portfolio-desc { font-size: 10px; }
+  /* Sin margen lateral: las columnas llegan de borde a borde de la pantalla.
+     El selector lleva .showcase para ganarle a la regla de ≤900px (más abajo
+     en el archivo), que si no vuelve a poner 24px a cada lado. */
+  .showcase .portfolio { padding: 20px 0 50px; }
+  .portfolio-columns { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .portfolio-col { gap: 10px; }
+  .portfolio-col:nth-child(2) { margin-top: 40px; }
+  .portfolio-col:nth-child(3) { margin-top: 0; }
+  .portfolio-card img { aspect-ratio: 14 / 15; object-position: left top; }
+  .portfolio-name { font-size: 13px; }
+  .portfolio-desc { font-size: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -500,6 +525,52 @@ section[id] { scroll-margin-top: 80px; }
 }
 .final-cta .section-title { margin-bottom: 10px; }
 
+/* ---------- FAQ ---------- */
+.faq { padding: 20px 60px 70px; }
+
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq details {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0 20px;
+}
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: '+';
+  font-size: 22px;
+  line-height: 1;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.faq details[open] summary::after { content: '\2212'; }
+
+.faq details p {
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   padding: 40px 60px;
@@ -511,6 +582,18 @@ section[id] { scroll-margin-top: 80px; }
 }
 
 .footer-title { font-size: 13px; font-weight: 600; }
+
+/* Grupos de enlaces con título, como el footer de shopify.com */
+.footer-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.footer-group .footer-title { color: var(--ink); margin-bottom: 4px; }
+.footer-group a { padding: 4px 0; }
+.footer-group a:hover { color: var(--ink); }
 .footer-title-brand { font-family: var(--font-display); font-size: 16px; }
 .footer-tagline { margin: 6px 0 0; font-size: 14px; color: var(--ink-soft); }
 .footer-copy { margin: 14px 0 0; font-size: 13px; color: var(--ink-faint); }
@@ -561,7 +644,7 @@ section[id] { scroll-margin-top: 80px; }
   .hero { padding: 40px 24px 36px; }
   .hero-title { font-size: 36px; }
 
-  .portfolio, .proceso, .pricing, .testimonials, .final-cta { padding-left: 24px; padding-right: 24px; }
+  .portfolio, .proceso, .pricing, .testimonials, .faq, .final-cta { padding-left: 24px; padding-right: 24px; }
 
   /* Las 3 cards apiladas (antes eran un carrusel horizontal que ocultaba la oferta). */
   .pricing-grid { flex-direction: column; align-items: center; }

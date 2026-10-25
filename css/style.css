@@ -134,6 +134,31 @@ section[id] { scroll-margin-top: 80px; }
 .btn-secondary:hover { background: #fff; }
 
 .btn-header { padding: 10px 20px; font-size: 13px; }
+
+/* Selector de idioma: dos botones EN | ES (mismo patrón que la florería) */
+.lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+}
+.lang__btn {
+  min-width: 38px;
+  height: 32px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  font: 600 12px/1 var(--font-body);
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.lang__btn:hover { background: var(--accent-soft); color: var(--accent); }
+.lang__btn[aria-pressed="true"] { background: var(--accent); color: #fff; }
 .btn-block { width: 100%; }
 
 /* ---------- Header ---------- */
@@ -620,7 +645,7 @@ section[id] { scroll-margin-top: 80px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .site-header { padding: 18px 24px; }
+  .site-header { padding: 18px 24px; gap: 10px; }
   .main-nav { display: none; }
   .nav-toggle { display: block; }
 
@@ -638,7 +663,10 @@ section[id] { scroll-margin-top: 80px; }
   }
 
   /* El botón de llamada queda visible en mobile: es la acción principal. */
-  .btn-header { margin-left: auto; padding: 10px 16px; }
+  /* El selector de idioma lleva el margin auto: logo a la izquierda, resto a la derecha */
+  .lang { margin-left: auto; }
+  .lang__btn { min-width: 30px; height: 30px; padding: 0 7px; }
+  .btn-header { margin-left: 0; padding: 10px 14px; white-space: nowrap; }
   .nav-toggle { padding: 10px; }
 
   .hero { padding: 40px 24px 36px; }
@@ -661,6 +689,15 @@ section[id] { scroll-margin-top: 80px; }
   .hero-title { font-size: 30px; }
   .hero-actions { flex-direction: column; }
   .testimonial-card { width: 85vw; max-width: 100%; }
+
+  /* Header en pantallas chicas: logo + EN|ES + llamada + menú no entran juntos
+     (en español "Llamar ahora" es más largo y empujaba el menú fuera de la
+     pantalla). El botón de llamada queda como ícono redondo: el texto sigue
+     como nombre accesible (aria-label) y el hero trae el botón grande. */
+  .site-header { padding: 14px 16px; gap: 8px; }
+  .btn-header { width: 40px; height: 40px; padding: 0; border-radius: 50%; }
+  .btn-header span { display: none; }
+  .btn-header i { font-size: 16px; }
 }
 
 /* ---------- Cookie banner ---------- */

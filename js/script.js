@@ -197,6 +197,8 @@ function initPortfolioColumns() {
 }
 
 function initMobileNav() {
+  // Etiqueta del botón del menú en el idioma actual (ver js/i18n.js)
+  const menuLabel = (open) => (window.I18N ? window.I18N.t(open ? 'menu.close' : 'menu.open') : (open ? 'Close menu' : 'Open menu'));
   const header = document.querySelector('.site-header');
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('main-nav');
@@ -205,7 +207,7 @@ function initMobileNav() {
   toggle.addEventListener('click', () => {
     const isOpen = header.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(isOpen));
-    toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    toggle.setAttribute('aria-label', menuLabel(isOpen));
     toggle.innerHTML = isOpen
       ? '<i class="bi bi-x-lg" aria-hidden="true"></i>'
       : '<i class="bi bi-list" aria-hidden="true"></i>';
@@ -214,7 +216,7 @@ function initMobileNav() {
   const closeMenu = () => {
     header.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Open menu');
+    toggle.setAttribute('aria-label', menuLabel(false));
     toggle.innerHTML = '<i class="bi bi-list" aria-hidden="true"></i>';
   };
 

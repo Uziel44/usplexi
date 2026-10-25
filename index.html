@@ -166,7 +166,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "name": "How does the process work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You tell me about your business and I send you a first draft. We refine the details until you are happy with it. Then your site goes live, and I am still here after launch."
+          "text": "We start with a market analysis of your business and 10 leading competitors and industry references, then build a first draft and deliver a working MVP. We add details and tools until your website reflects your company's value proposition, and then follow up with ongoing improvements and SEO."
         }
       }
     ]
@@ -185,19 +185,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-  <a class="skip-link" href="#portfolio">Skip to content</a>
+  <a class="skip-link" href="#portfolio" data-i18n="skip-to-content">Skip to content</a>
 
   <header class="site-header">
     <a href="#top" class="logo">Plexiweb</a>
 
-    <nav class="main-nav" id="main-nav" aria-label="Main">
-      <a href="#portfolio">Our work</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#reviews">Reviews</a>
+    <nav class="main-nav" id="main-nav" aria-label="Main" data-i18n-attr="aria-label:main">
+      <a href="#portfolio" data-i18n="our-work">Our work</a>
+      <a href="#pricing" data-i18n="pricing">Pricing</a>
+      <a href="#how-it-works" data-i18n="how-it-works">How it works</a>
+      <a href="#reviews" data-i18n="reviews">Reviews</a>
     </nav>
 
-    <a href="tel:+16469656598" class="btn btn-primary btn-header" data-cta="header"><i class="bi bi-telephone-fill" aria-hidden="true"></i>Call now</a>
+    <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:language">
+      <button class="lang__btn" type="button" lang="en" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+      <button class="lang__btn" type="button" lang="es" data-lang="es" aria-label="Español" aria-pressed="false">ES</button>
+    </div>
+
+    <a href="tel:+16469656598" class="btn btn-primary btn-header" data-cta="header" aria-label="Call now" data-i18n-attr="aria-label:call-now"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span data-i18n="call-now">Call now</span></a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
       <i class="bi bi-list" aria-hidden="true"></i>
@@ -210,26 +215,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="showcase">
 
     <section class="hero" data-reveal-group="up">
-      <h1 class="hero-title">Business websites <em class="accent-serif">ready to sell</em></h1>
-      <p class="hero-subtitle">With a clear strategy: attract, build trust and close the sale.</p>
+      <h1 class="hero-title"><span data-i18n="business-websites">Business websites</span> <em class="accent-serif" data-i18n="ready-to-sell">ready to sell</em></h1>
+      <p class="hero-subtitle" data-i18n="with-a-clear-strategy-attract-build-trus">With a clear strategy: attract, build trust and close the sale.</p>
 
       <ol class="hero-steps" data-reveal>
-        <li>1. Your customer sees your product and likes it</li>
-        <li>2. They trust your brand</li>
-        <li><strong>3. They contact you to buy</strong></li>
+        <li data-i18n="1-your-customer-sees-your-product-and-li">1. Your customer sees your product and likes it</li>
+        <li data-i18n="2-they-trust-your-brand">2. They trust your brand</li>
+        <li><strong data-i18n="3-they-contact-you-to-buy">3. They contact you to buy</strong></li>
       </ol>
 
-      <p class="hero-question" data-reveal>Design, development and SEO. Your website online, no hassle</p>
-      <p class="hero-subquestion" data-reveal>Sell 24/7, ALL ACROSS THE COUNTRY.</p>
+      <p class="hero-question" data-reveal data-i18n="design-development-and-seo-your-website">Design, development and SEO. Your website online, no hassle</p>
+      <p class="hero-subquestion" data-reveal data-i18n="sell-24-7-all-across-the-country">Sell 24/7, ALL ACROSS THE COUNTRY.</p>
 
       <div class="hero-actions" data-reveal>
-        <a href="tel:+16469656598" class="btn btn-primary" data-cta="hero"><i class="bi bi-telephone-fill" aria-hidden="true"></i>Call +1 646 965 6598</a>
-        <a href="#portfolio" class="btn btn-secondary">See our work</a>
+        <a href="tel:+16469656598" class="btn btn-primary" data-cta="hero"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span data-i18n="call-1-646-965-6598">Call +1 646 965 6598</span></a>
+        <a href="#portfolio" class="btn btn-secondary" data-i18n="see-our-work">See our work</a>
       </div>
     </section>
 
     <section class="portfolio" id="portfolio">
-      <h2 class="visually-hidden">Websites we have built for businesses</h2>
+      <h2 class="visually-hidden" data-i18n="websites-we-have-built-for-businesses">Websites we have built for businesses</h2>
       <!-- 3 columnas con parallax: cada una se desplaza a distinta velocidad
            mientras el usuario scrollea la página (como el showcase de
            tiendanube.com), no es movimiento automático. Para sumar un
@@ -240,50 +245,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="portfolio-columns">
         <div class="portfolio-col" data-parallax="-0.12">
           <a href="https://electrotest.com.ar" target="_blank" rel="noopener" class="portfolio-card">
-            <img src="assets/home/elec.webp" alt="Electrotest website homepage" width="800" height="618" loading="lazy" decoding="async">
+            <img src="assets/home/elec.webp" alt="Electrotest website homepage" width="800" height="618" loading="lazy" decoding="async" data-i18n-attr="alt:electrotest-website-homepage">
             <div class="portfolio-name">Electrotest</div>
-            <div class="portfolio-desc">Industrial electrical maintenance</div>
+            <div class="portfolio-desc" data-i18n="industrial-electrical-maintenance">Industrial electrical maintenance</div>
           </a>
           <a href="https://ilhagrande.pages.dev/" target="_blank" rel="noopener" class="portfolio-card">
-            <img src="assets/home/ilha.webp" alt="Ilha Grande adventure tours website homepage" width="800" height="578" loading="lazy" decoding="async">
+            <img src="assets/home/ilha.webp" alt="Ilha Grande adventure tours website homepage" width="800" height="578" loading="lazy" decoding="async" data-i18n-attr="alt:ilha-grande-adventure-tours-website-home">
             <div class="portfolio-name">Ilha Grande</div>
-            <div class="portfolio-desc">Adventure tours</div>
+            <div class="portfolio-desc" data-i18n="adventure-tours">Adventure tours</div>
           </a>
           <a href="https://rincondenina.pages.dev/" target="_blank" rel="noopener" class="portfolio-card">
-            <img src="assets/home/rincondenina.webp" alt="Rincón de Nina lodging website homepage" width="800" height="384" loading="lazy" decoding="async">
+            <img src="assets/home/rincondenina.webp" alt="Rincón de Nina lodging website homepage" width="800" height="384" loading="lazy" decoding="async" data-i18n-attr="alt:rinc-n-de-nina-lodging-website-homepage">
             <div class="portfolio-name">Rincón de Nina</div>
-            <div class="portfolio-desc">Lodging and getaways</div>
+            <div class="portfolio-desc" data-i18n="lodging-and-getaways">Lodging and getaways</div>
           </a>
         </div>
 
         <div class="portfolio-col" data-parallax="0.16">
           <a href="https://uziel44.github.io/miyendj" target="_blank" rel="noopener" class="portfolio-card">
-            <img src="assets/home/miy.webp" alt="MIYEN dj website homepage" width="327" height="368" loading="lazy" decoding="async">
+            <img src="assets/home/miy.webp" alt="MIYEN dj website homepage" width="327" height="368" loading="lazy" decoding="async" data-i18n-attr="alt:miyen-dj-website-homepage">
             <div class="portfolio-name">MIYEN dj</div>
-            <div class="portfolio-desc">DJ and live shows</div>
+            <div class="portfolio-desc" data-i18n="dj-and-live-shows">DJ and live shows</div>
           </a>
           <a href="https://clubandinovcp.pages.dev/" target="_blank" rel="noopener" class="portfolio-card">
-            <img src="assets/home/clubvcp.webp" alt="Club Andino VCP website homepage" width="800" height="522" loading="lazy" decoding="async">
+            <img src="assets/home/clubvcp.webp" alt="Club Andino VCP website homepage" width="800" height="522" loading="lazy" decoding="async" data-i18n-attr="alt:club-andino-vcp-website-homepage">
             <div class="portfolio-name">Club Andino VCP</div>
-            <div class="portfolio-desc">Climbing and trekking club</div>
+            <div class="portfolio-desc" data-i18n="climbing-and-trekking-club">Climbing and trekking club</div>
           </a>
           <a href="https://gestion.plexi.com.ar" target="_blank" rel="noopener" class="portfolio-card">
-            <img src="assets/home/gest.webp" alt="Plexi Gestión business consulting website homepage" width="564" height="696" loading="lazy" decoding="async">
+            <img src="assets/home/gest.webp" alt="Plexi Gestión business consulting website homepage" width="564" height="696" loading="lazy" decoding="async" data-i18n-attr="alt:plexi-gesti-n-business-consulting-websit">
             <div class="portfolio-name">Plexi Gestión</div>
-            <div class="portfolio-desc">Business consulting</div>
+            <div class="portfolio-desc" data-i18n="business-consulting">Business consulting</div>
           </a>
         </div>
 
         <div class="portfolio-col" data-parallax="-0.2">
+          <a href="https://anamariaflowers.com" target="_blank" rel="noopener" class="portfolio-card">
+            <img src="assets/home/anamaria.webp" alt="Ana María Florería website homepage" width="800" height="618" loading="lazy" decoding="async" data-i18n-attr="alt:ana-mar-a-florer-a-website-homepage">
+            <div class="portfolio-name">Ana María Florería</div>
+            <div class="portfolio-desc" data-i18n="signature-florist">Signature florist</div>
+          </a>
           <a href="https://uziel44.github.io/datovivo" target="_blank" rel="noopener" class="portfolio-card">
-            <img src="assets/home/dato.webp" alt="Datovivo statistics blog homepage" width="800" height="502" loading="lazy" decoding="async">
+            <img src="assets/home/dato.webp" alt="Datovivo statistics blog homepage" width="800" height="502" loading="lazy" decoding="async" data-i18n-attr="alt:datovivo-statistics-blog-homepage">
             <div class="portfolio-name">Datovivo</div>
-            <div class="portfolio-desc">Data and statistics blog</div>
+            <div class="portfolio-desc" data-i18n="data-and-statistics-blog">Data and statistics blog</div>
           </a>
           <a href="https://verax-duediligence.pages.dev/" target="_blank" rel="noopener" class="portfolio-card">
-            <img src="assets/home/verax.webp" alt="Verax Due Diligence website homepage" width="800" height="382" loading="lazy" decoding="async">
+            <img src="assets/home/verax.webp" alt="Verax Due Diligence website homepage" width="800" height="382" loading="lazy" decoding="async" data-i18n-attr="alt:verax-due-diligence-website-homepage">
             <div class="portfolio-name">Verax Due Diligence</div>
-            <div class="portfolio-desc">Research and due diligence</div>
+            <div class="portfolio-desc" data-i18n="research-and-due-diligence">Research and due diligence</div>
           </a>
           <!--
           <a href="https://uziel44.github.io/freddtur/" target="_blank" rel="noopener" class="portfolio-card">
@@ -299,80 +309,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <section class="pricing" id="pricing">
-      <h2 class="section-title" data-reveal>Simple pricing</h2>
-      <p class="section-intro" data-reveal>Pick a plan, or call if your project is bigger.</p>
+      <h2 class="section-title" data-reveal data-i18n="simple-pricing">Simple pricing</h2>
+      <p class="section-intro" data-reveal data-i18n="pick-a-plan-or-call-if-your-project-is-b">Pick a plan, or call if your project is bigger.</p>
 
       <div class="pricing-grid" data-reveal-group="up">
         <div class="price-card" data-reveal>
           <div class="price-card-body">
-            <h3 class="price-name">Static website</h3>
-            <div class="price-amount">$100<span>one-time</span></div>
+            <h3 class="price-name" data-i18n="static-website">Static website</h3>
+            <div class="price-amount">$100<span data-i18n="one-time">one-time</span></div>
             <ul class="price-list">
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>Simple static website</li>
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>Payment gateway connected</li>
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>Mobile-friendly design</li>
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>Your content and branding</li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="simple-static-website">Simple static website</span></li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="payment-gateway-connected">Payment gateway connected</span></li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="mobile-friendly-design">Mobile-friendly design</span></li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="your-content-and-branding">Your content and branding</span></li>
             </ul>
           </div>
-          <a href="tel:+16469656598" class="btn btn-secondary btn-block" data-cta="pricing_static">Get a static site</a>
+          <a href="tel:+16469656598" class="btn btn-secondary btn-block" data-cta="pricing_static" data-i18n="get-a-static-site">Get a static site</a>
         </div>
 
         <div class="price-card price-card-featured" data-reveal>
-          <div class="price-badge">Recommended</div>
+          <div class="price-badge" data-i18n="recommended">Recommended</div>
           <div class="price-card-body">
-            <h3 class="price-name">Dynamic website</h3>
-            <div class="price-amount">$200<span>one-time</span></div>
+            <h3 class="price-name" data-i18n="dynamic-website">Dynamic website</h3>
+            <div class="price-amount">$200<span data-i18n="one-time">one-time</span></div>
             <ul class="price-list">
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>Dynamic, data-driven website</li>
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>SEO included</li>
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>Data analytics included</li>
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>Mobile-friendly design</li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="dynamic-data-driven-website">Dynamic, data-driven website</span></li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="seo-included">SEO included</span></li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="data-analytics-included">Data analytics included</span></li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="mobile-friendly-design">Mobile-friendly design</span></li>
             </ul>
           </div>
-          <a href="tel:+16469656598" class="btn btn-primary btn-block" data-cta="pricing_dynamic">Get a dynamic site</a>
+          <a href="tel:+16469656598" class="btn btn-primary btn-block" data-cta="pricing_dynamic" data-i18n="get-a-dynamic-site">Get a dynamic site</a>
         </div>
 
         <div class="price-card" data-reveal>
           <div class="price-card-body">
-            <h3 class="price-name">Custom project</h3>
-            <div class="price-amount price-amount-text">Let's talk</div>
+            <h3 class="price-name" data-i18n="custom-project">Custom project</h3>
+            <div class="price-amount price-amount-text" data-i18n="let-s-talk">Let's talk</div>
             <ul class="price-list">
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>Redesigns and custom software</li>
-              <li><i class="bi bi-check-lg" aria-hidden="true"></i>Priced after a quick call</li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="redesigns-and-custom-software">Redesigns and custom software</span></li>
+              <li><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="priced-after-a-quick-call">Priced after a quick call</span></li>
             </ul>
           </div>
           <a href="tel:+16469656598" class="btn btn-secondary btn-block" data-cta="pricing_custom"><i class="bi bi-telephone-fill" aria-hidden="true"></i>+1 646 965 6598</a>
         </div>
       </div>
 
-      <p class="pricing-note" data-reveal>Prices are one-time per site. Payment-gateway fees are charged by the payment provider.</p>
+      <p class="pricing-note" data-reveal data-i18n="prices-are-one-time-per-site-payment-gat">Prices are one-time per site. Payment-gateway fees are charged by the payment provider.</p>
     </section>
 
     <section class="proceso" id="how-it-works">
       <div class="proceso-inner">
-        <h2 class="section-title section-title-left" data-reveal>How it works</h2>
+        <h2 class="section-title section-title-left" data-reveal data-i18n="how-it-works">How it works</h2>
         <ol class="proceso-steps" data-reveal data-reveal-delay="0.1">
-          <li>1. You tell me about your business and I send you a first draft.</li>
-          <li>2. We refine the details until you're happy with it.</li>
-          <li>3. Your site goes live, and I'm still here after launch.</li>
+          <li data-i18n="1-market-analysis-and-mvp-we-study-your">1. Market analysis and MVP: we study your business and benchmark 10 leading competitors and industry references, then build a first draft and deliver a working MVP.</li>
+          <li data-i18n="2-refinement-we-add-details-and-tools-un">2. Refinement: we add details and tools until your website reflects your company's value proposition.</li>
+          <li data-i18n="3-growth-we-follow-up-with-ongoing-impro">3. Growth: we follow up with ongoing improvements and SEO.</li>
         </ol>
 
         <div class="proceso-extra" data-reveal data-reveal-delay="0.2">
-          <div class="proceso-extra-title"><i class="bi bi-check-all" aria-hidden="true"></i>Built to be found and measured</div>
-          <p>Dynamic sites include SEO and data analytics, so you can see who visits and what they do.</p>
+          <div class="proceso-extra-title"><i class="bi bi-check-all" aria-hidden="true"></i><span data-i18n="built-to-be-found-and-measured">Built to be found and measured</span></div>
+          <p data-i18n="dynamic-sites-include-seo-and-data-analy">Dynamic sites include SEO and data analytics, so you can see who visits and what they do.</p>
         </div>
       </div>
     </section>
 
     <section class="testimonials" id="reviews">
-      <h2 class="section-title" data-reveal>What clients say</h2>
+      <h2 class="section-title" data-reveal data-i18n="what-clients-say">What clients say</h2>
 
       <div class="testimonials-track no-scrollbar" data-reveal-group="up">
         <div class="testimonial-card" data-reveal>
-          <div class="stars" role="img" aria-label="5 out of 5 stars">
+          <div class="stars" role="img" aria-label="5 out of 5 stars" data-i18n-attr="aria-label:5-out-of-5-stars">
             <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
           </div>
-          <p class="testimonial-quote">"Excellent work, they understood perfectly the image we want to convey to our clients. Thanks to the new website, we are able to project the professionalism and reliability we were looking for."</p>
+          <p class="testimonial-quote" data-i18n="excellent-work-they-understood-perfectly">"Excellent work, they understood perfectly the image we want to convey to our clients. Thanks to the new website, we are able to project the professionalism and reliability we were looking for."</p>
           <div class="testimonial-author">
             <div class="avatar" aria-hidden="true">ZG</div>
             <div>
@@ -383,10 +393,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="testimonial-card" data-reveal>
-          <div class="stars" role="img" aria-label="5 out of 5 stars">
+          <div class="stars" role="img" aria-label="5 out of 5 stars" data-i18n-attr="aria-label:5-out-of-5-stars">
             <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
           </div>
-          <p class="testimonial-quote">"Amazing. I used to use beacons.ai, but it had many limitations and a prebuilt format; I never had the freedom to choose and showcase my shows the way I can with my own page. Having your own website and being able to track metrics helps you connect much better with your clients."</p>
+          <p class="testimonial-quote" data-i18n="amazing-i-used-to-use-beacons-ai-but-it">"Amazing. I used to use beacons.ai, but it had many limitations and a prebuilt format; I never had the freedom to choose and showcase my shows the way I can with my own page. Having your own website and being able to track metrics helps you connect much better with your clients."</p>
           <div class="testimonial-author">
             <div class="avatar" aria-hidden="true">MC</div>
             <div>
@@ -397,15 +407,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="testimonial-card" data-reveal>
-          <div class="stars" role="img" aria-label="5 out of 5 stars">
+          <div class="stars" role="img" aria-label="5 out of 5 stars" data-i18n-attr="aria-label:5-out-of-5-stars">
             <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
           </div>
-          <p class="testimonial-quote">"The platform captures the essence of our outdoor experiences. Navigation is super intuitive for travelers, and it shows in the tour bookings since we launched the website."</p>
+          <p class="testimonial-quote" data-i18n="the-platform-captures-the-essence-of-our">"The platform captures the essence of our outdoor experiences. Navigation is super intuitive for travelers, and it shows in the tour bookings since we launched the website."</p>
           <div class="testimonial-author">
             <div class="avatar" aria-hidden="true">FR</div>
             <div>
               <div class="author-name">Franco Raffaeli</div>
-              <div class="author-role">Ilha Grande adventure guide</div>
+              <div class="author-role" data-i18n="ilha-grande-adventure-guide">Ilha Grande adventure guide</div>
             </div>
           </div>
         </div>
@@ -413,40 +423,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section class="faq" id="faq">
-      <h2 class="section-title" data-reveal>Website pricing and process: common questions</h2>
+      <h2 class="section-title" data-reveal data-i18n="website-pricing-and-process-common-quest">Website pricing and process: common questions</h2>
 
       <div class="faq-list" data-reveal>
         <details>
-          <summary>How much does a website cost?</summary>
-          <p>A static website is $100 and a dynamic website is $200, both one-time per site. Custom projects such as redesigns and custom software are priced after a quick call at +1 646 965 6598.</p>
+          <summary data-i18n="how-much-does-a-website-cost">How much does a website cost?</summary>
+          <p data-i18n="a-static-website-is-100-and-a-dynamic-we">A static website is $100 and a dynamic website is $200, both one-time per site. Custom projects such as redesigns and custom software are priced after a quick call at +1 646 965 6598.</p>
         </details>
         <details>
-          <summary>Do you build websites for businesses in Miami and across Florida?</summary>
-          <p>Yes. I work with businesses in Miami and across Florida, by phone and online. I speak English and Spanish. Call +1 646 965 6598 to get started.</p>
+          <summary data-i18n="do-you-build-websites-for-businesses-in">Do you build websites for businesses in Miami and across Florida?</summary>
+          <p data-i18n="yes-i-work-with-businesses-in-miami-and">Yes. I work with businesses in Miami and across Florida, by phone and online. I speak English and Spanish. Call +1 646 965 6598 to get started.</p>
         </details>
         <details>
-          <summary>What is the difference between the static and the dynamic website?</summary>
-          <p>The static website is a simple site with a payment gateway connected, your content and your branding. The dynamic website is data-driven and includes SEO and data analytics. Both are mobile-friendly.</p>
+          <summary data-i18n="what-is-the-difference-between-the-stati">What is the difference between the static and the dynamic website?</summary>
+          <p data-i18n="the-static-website-is-a-simple-site-with">The static website is a simple site with a payment gateway connected, your content and your branding. The dynamic website is data-driven and includes SEO and data analytics. Both are mobile-friendly.</p>
         </details>
         <details>
-          <summary>Can I accept online payments on the $100 website?</summary>
-          <p>Yes, the static website includes a connected payment gateway. Gateway fees are charged by the payment provider.</p>
+          <summary data-i18n="can-i-accept-online-payments-on-the-100">Can I accept online payments on the $100 website?</summary>
+          <p data-i18n="yes-the-static-website-includes-a-connec">Yes, the static website includes a connected payment gateway. Gateway fees are charged by the payment provider.</p>
         </details>
         <details>
-          <summary>What does "SEO and data analytics included" mean?</summary>
-          <p>Dynamic websites include SEO and data analytics, so you can see who visits and what they do. Call to discuss the details of your project.</p>
+          <summary data-i18n="what-does-seo-and-data-analytics-include">What does "SEO and data analytics included" mean?</summary>
+          <p data-i18n="dynamic-websites-include-seo-and-data-an">Dynamic websites include SEO and data analytics, so you can see who visits and what they do. Call to discuss the details of your project.</p>
         </details>
         <details>
-          <summary>How does the process work?</summary>
-          <p>You tell me about your business and I send you a first draft. We refine the details until you are happy with it. Then your site goes live, and I am still here after launch.</p>
+          <summary data-i18n="how-does-the-process-work">How does the process work?</summary>
+          <p data-i18n="we-start-with-a-market-analysis-of-your">We start with a market analysis of your business and 10 leading competitors and industry references, then build a first draft and deliver a working MVP. We add details and tools until your website reflects your company's value proposition, and then follow up with ongoing improvements and SEO.</p>
         </details>
       </div>
     </section>
 
     <section class="final-cta" data-reveal>
-      <h2 class="section-title">Ready for your website?</h2>
-      <p class="section-intro">Call and tell me about your business.</p>
-      <a href="tel:+16469656598" class="btn btn-primary" data-cta="final"><i class="bi bi-telephone-fill" aria-hidden="true"></i>Call +1 646 965 6598</a>
+      <h2 class="section-title" data-i18n="ready-for-your-website">Ready for your website?</h2>
+      <p class="section-intro" data-i18n="call-and-tell-me-about-your-business">Call and tell me about your business.</p>
+      <a href="tel:+16469656598" class="btn btn-primary" data-cta="final"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span data-i18n="call-1-646-965-6598">Call +1 646 965 6598</span></a>
     </section>
 
   </main>
@@ -454,57 +464,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <footer class="site-footer" id="contact">
     <div class="footer-brand">
       <div class="footer-title footer-title-brand">Plexiweb</div>
-      <p class="footer-tagline">Websites for businesses, creators and professionals in Miami and across Florida.</p>
+      <p class="footer-tagline" data-i18n="websites-for-businesses-creators-and-pro">Websites for businesses, creators and professionals in Miami and across Florida.</p>
       <p class="footer-copy">&copy; 2026 Plexiweb</p>
     </div>
 
-    <nav class="footer-group" aria-label="Services">
-      <div class="footer-title">Services</div>
-      <a href="#pricing">Static website $100</a>
-      <a href="#pricing">Dynamic website $200</a>
-      <a href="#pricing">Custom projects</a>
+    <nav class="footer-group" aria-label="Services" data-i18n-attr="aria-label:services">
+      <div class="footer-title" data-i18n="services">Services</div>
+      <a href="#pricing" data-i18n="static-website-100">Static website $100</a>
+      <a href="#pricing" data-i18n="dynamic-website-200">Dynamic website $200</a>
+      <a href="#pricing" data-i18n="custom-projects">Custom projects</a>
     </nav>
 
-    <nav class="footer-group" aria-label="Company">
-      <div class="footer-title">Company</div>
-      <a href="#portfolio">Our work</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
+    <nav class="footer-group" aria-label="Company" data-i18n-attr="aria-label:company">
+      <div class="footer-title" data-i18n="company">Company</div>
+      <a href="#portfolio" data-i18n="our-work">Our work</a>
+      <a href="#how-it-works" data-i18n="how-it-works">How it works</a>
+      <a href="#reviews" data-i18n="reviews">Reviews</a>
+      <a href="#faq" data-i18n="faq">FAQ</a>
     </nav>
 
     <div class="footer-group">
-      <div class="footer-title">Contact</div>
+      <div class="footer-title" data-i18n="contact">Contact</div>
       <a href="tel:+16469656598">+1 646 965 6598</a>
       <a href="#" id="footer-cookie-link">Cookies</a>
     </div>
   </footer>
 
-  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie preferences" aria-hidden="true">
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie preferences" aria-hidden="true" data-i18n-attr="aria-label:cookie-preferences">
     <div class="cookie-card">
-      <p class="cookie-text">We use cookies to run the site and to measure traffic. Analytics are optional.</p>
+      <p class="cookie-text" data-i18n="we-use-cookies-to-run-the-site-and-to-me">We use cookies to run the site and to measure traffic. Analytics are optional.</p>
 
       <div class="cookie-settings-panel" id="cookie-settings-panel" hidden>
         <label class="cookie-toggle">
-          <span>Necessary</span>
+          <span data-i18n="necessary">Necessary</span>
           <input type="checkbox" checked disabled>
         </label>
         <label class="cookie-toggle">
-          <span>Analytics</span>
+          <span data-i18n="analytics">Analytics</span>
           <input type="checkbox" id="cookie-analytics-toggle">
         </label>
-        <button class="cookie-save" id="cookie-save">Save preferences</button>
+        <button class="cookie-save" id="cookie-save" data-i18n="save-preferences">Save preferences</button>
       </div>
 
       <div class="cookie-actions">
-        <button class="btn btn-secondary btn-sm" id="cookie-reject">Reject</button>
-        <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
+        <button class="btn btn-secondary btn-sm" id="cookie-reject" data-i18n="reject">Reject</button>
+        <button class="btn btn-primary btn-sm" id="cookie-accept" data-i18n="accept">Accept</button>
       </div>
-      <a href="#" class="cookie-link" id="cookie-settings">Preferences</a>
+      <a href="#" class="cookie-link" id="cookie-settings" data-i18n="preferences">Preferences</a>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js" defer></script>
+  <script src="js/i18n.js" defer></script>
   <script src="js/script.js" defer></script>
 </body>
 </html>

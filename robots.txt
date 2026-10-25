@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# TODO: cuando se elija el dominio, agregar:
-# Sitemap: https://DOMINIO/sitemap.xml
+Sitemap: https://plexiweb.app/sitemap.xml

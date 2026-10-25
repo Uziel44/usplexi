@@ -26,7 +26,7 @@ Abrir `index.html` con doble clic también funciona, salvo que se necesite `fetc
 
 ## Deploy
 
-Se sube la raíz del repo tal cual (no hay carpeta `dist/`). Publicado en Cloudflare Pages: `https://plexiweb.pages.dev/`.
+Se sube la raíz del repo tal cual (no hay carpeta `dist/`). Publicado en `https://plexiweb.app/` (ver CNAME).
 
 ## Agregar un proyecto al portfolio
 

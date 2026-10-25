@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+.qodo/
+*.log
+.vscode/
+*.json.key
+plexiweb-*.json
+credenciales.json

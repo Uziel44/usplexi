@@ -23,8 +23,8 @@
     es: {
       'menu.open': 'Abrir menú',
       'menu.close': 'Cerrar menú',
-      "meta.title": "Diseño de sitios web para negocios desde $100 | Plexiweb",
-      "meta.description": "Plexiweb crea sitios web para negocios: un sitio estático de $100 con pasarela de pago o un sitio dinámico de $200 con SEO y analítica incluidos. Mira nuestro trabajo.",
+      "meta.title": "Diseño web para pequeños negocios desde $100 | USA | Plexiweb",
+      "meta.description": "Diseño web accesible para pequeños negocios en todo Estados Unidos. Sitio de $100 con pagos online o de $200 con SEO y analítica. Llama al +1 646 965 6598.",
       // Textos marcados con data-i18n / data-i18n-attr
       "call-now": "Llamar ahora",
       "skip-to-content": "Saltar al contenido",

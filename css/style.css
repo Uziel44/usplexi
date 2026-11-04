@@ -287,7 +287,7 @@ section[id] { scroll-margin-top: 80px; }
   margin-top: 30px;
 }
 
-/* ---------- Portfolio: 3 columnas con parallax (tipo tiendanube.com) ---------- */
+/* ---------- Portfolio: 4 columnas con parallax (tipo tiendanube.com) ---------- */
 .portfolio {
   padding: 20px 60px 70px;
   max-width: var(--max-width);
@@ -300,7 +300,7 @@ section[id] { scroll-margin-top: 80px; }
 
 .portfolio-columns {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
   align-items: start;
   /* Padding vertical extra: así el parallax tiene margen para moverse sin
@@ -312,6 +312,7 @@ section[id] { scroll-margin-top: 80px; }
    de tiendanube.com, donde las columnas no arrancan alineadas entre sí. */
 .portfolio-col:nth-child(2) { margin-top: 56px; }
 .portfolio-col:nth-child(3) { margin-top: -28px; }
+.portfolio-col:nth-child(4) { margin-top: 28px; }
 
 .portfolio-col {
   display: flex;
@@ -348,10 +349,18 @@ section[id] { scroll-margin-top: 80px; }
 .portfolio-name { font-size: 14px; font-weight: 600; padding: 0 4px; }
 .portfolio-desc { font-size: 13px; color: var(--ink-faint); padding: 0 4px 4px; }
 
-/* La 3ª columna queda vacía en mobile (initPortfolioColumns reparte sus cards). */
+/* Tablet y mobile (≤900px): 2 columnas. Las columnas 3 y 4 quedan vacías y
+   ocultas (initPortfolioColumns reparte sus cards entre la 1ª y la 2ª). Va antes
+   de la regla de ≤520px para que ésta pueda seguir ajustándola. */
+@media (max-width: 900px) {
+  .portfolio-columns { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-col:nth-child(2) { margin-top: 40px; }
+  .portfolio-col:nth-child(3),
+  .portfolio-col:nth-child(4) { margin-top: 0; }
+}
 .portfolio-col[hidden] { display: none; }
 
-/* Mobile: 2 columnas con 4 cards cada una (initPortfolioColumns las reparte).
+/* Mobile: 2 columnas con 6 cards cada una (initPortfolioColumns las reparte).
    Cada imagen se recorta a ~2/3 de su ancho: la caja es 14:15 y una captura de
    1.4:1 muestra (14/15) / 1.4 = 2/3. Es aproximado: las capturas no tienen
    todas la misma proporción (de 0.8 a 2.1), así que las más anchas se recortan
@@ -374,7 +383,8 @@ section[id] { scroll-margin-top: 80px; }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-col { transform: none !important; }
   .portfolio-col:nth-child(2),
-  .portfolio-col:nth-child(3) { margin-top: 0; }
+  .portfolio-col:nth-child(3),
+  .portfolio-col:nth-child(4) { margin-top: 0; }
 }
 
 /* ---------- Proceso ---------- */
